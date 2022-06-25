@@ -1,0 +1,194 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2022-04-05T14:24:05.818672+02:00",
+            "magic": "3941cd8d8f96d38ddb61c5e4d852cb2b8f303c21d4cb1800bbf01ef47779cdfa",
+            "version": "v3.26.1"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "dnhook123",
+                "project": "backend-api-aws",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::pulumi:pulumi:Stack::backend-api-aws-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::pulumi:providers:aws::default_5_0_0",
+                "custom": true,
+                "id": "73a7235d-9b00-4c5b-9b61-b77409424207",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "version": "5.0.0"
+                },
+                "outputs": {
+                    "version": "5.0.0"
+                },
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::awsx:x:ec2:Vpc::david-vpc",
+                "custom": false,
+                "type": "awsx:x:ec2:Vpc",
+                "parent": "urn:pulumi:dev::backend-api-aws::pulumi:pulumi:Stack::backend-api-aws-dev",
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::awsx:x:ec2:Vpc::vpc",
+                "custom": false,
+                "type": "awsx:x:ec2:Vpc",
+                "parent": "urn:pulumi:dev::backend-api-aws::pulumi:pulumi:Stack::backend-api-aws-dev",
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::david:Database::daviddb",
+                "custom": false,
+                "type": "david:Database",
+                "parent": "urn:pulumi:dev::backend-api-aws::pulumi:pulumi:Stack::backend-api-aws-dev",
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::pulumi:providers:aws::default_4_38_1",
+                "custom": true,
+                "id": "be3d2ff5-2a5e-4cfe-b897-10aee9b28357",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "version": "4.38.1"
+                },
+                "outputs": {
+                    "version": "4.38.1"
+                },
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::awsx:x:ec2:Vpc$aws:ec2/vpc:Vpc::vpc",
+                "custom": true,
+                "id": "vpc-055fc2edbf76bb986",
+                "type": "aws:ec2/vpc:Vpc",
+                "inputs": {
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-1:820116308106:vpc/vpc-055fc2edbf76bb986",
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.0.0.0/16",
+                    "defaultNetworkAclId": "acl-0154925044f0e58ae",
+                    "defaultRouteTableId": "rtb-0bf2e6d4170a8b505",
+                    "defaultSecurityGroupId": "sg-066ae14c7525eee07",
+                    "dhcpOptionsId": "dopt-8f993fe9",
+                    "enableClassiclink": false,
+                    "enableClassiclinkDnsSupport": false,
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "id": "vpc-055fc2edbf76bb986",
+                    "instanceTenancy": "default",
+                    "ipv6AssociationId": "",
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockNetworkBorderGroup": "",
+                    "ipv6IpamPoolId": "",
+                    "ipv6NetmaskLength": 0,
+                    "mainRouteTableId": "rtb-0bf2e6d4170a8b505",
+                    "ownerId": "820116308106",
+                    "tags": {},
+                    "tagsAll": {}
+                },
+                "parent": "urn:pulumi:dev::backend-api-aws::awsx:x:ec2:Vpc::vpc",
+                "provider": "urn:pulumi:dev::backend-api-aws::pulumi:providers:aws::default_5_0_0::73a7235d-9b00-4c5b-9b61-b77409424207",
+                "propertyDependencies": {
+                    "assignGeneratedIpv6CidrBlock": null,
+                    "cidrBlock": null,
+                    "enableDnsHostnames": null,
+                    "enableDnsSupport": null,
+                    "instanceTenancy": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::backend-api-aws::aws:ec2/vpc:Vpc::vpc"
+                ],
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:dev::backend-api-aws::pulumi:providers:kubernetes::default_3_17_0",
+                "custom": true,
+                "id": "9b97c51e-9dac-4051-b7f9-4d6c0194f7b5",
+                "type": "pulumi:providers:kubernetes",
+                "inputs": {
+                    "version": "3.17.0"
+                },
+                "outputs": {
+                    "version": "3.17.0"
+                },
+                "sequenceNumber": 1
+            }
+        ],
+        "pending_operations": [
+            {
+                "resource": {
+                    "urn": "urn:pulumi:dev::backend-api-aws::awsx:x:ec2:Vpc$aws:ec2/vpc:Vpc::vpc",
+                    "custom": true,
+                    "id": "vpc-055fc2edbf76bb986",
+                    "type": "aws:ec2/vpc:Vpc",
+                    "inputs": {
+                        "assignGeneratedIpv6CidrBlock": false,
+                        "cidrBlock": "10.0.0.0/16",
+                        "enableDnsHostnames": true,
+                        "enableDnsSupport": true,
+                        "instanceTenancy": "default"
+                    },
+                    "outputs": {
+                        "__meta": "{\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-west-1:820116308106:vpc/vpc-055fc2edbf76bb986",
+                        "assignGeneratedIpv6CidrBlock": false,
+                        "cidrBlock": "10.0.0.0/16",
+                        "defaultNetworkAclId": "acl-0154925044f0e58ae",
+                        "defaultRouteTableId": "rtb-0bf2e6d4170a8b505",
+                        "defaultSecurityGroupId": "sg-066ae14c7525eee07",
+                        "dhcpOptionsId": "dopt-8f993fe9",
+                        "enableClassiclink": false,
+                        "enableClassiclinkDnsSupport": false,
+                        "enableDnsHostnames": true,
+                        "enableDnsSupport": true,
+                        "id": "vpc-055fc2edbf76bb986",
+                        "instanceTenancy": "default",
+                        "ipv6AssociationId": "",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockNetworkBorderGroup": "",
+                        "ipv6IpamPoolId": "",
+                        "ipv6NetmaskLength": 0,
+                        "mainRouteTableId": "rtb-0bf2e6d4170a8b505",
+                        "ownerId": "820116308106",
+                        "tags": {},
+                        "tagsAll": {}
+                    },
+                    "parent": "urn:pulumi:dev::backend-api-aws::awsx:x:ec2:Vpc::vpc",
+                    "provider": "urn:pulumi:dev::backend-api-aws::pulumi:providers:aws::default_5_0_0::73a7235d-9b00-4c5b-9b61-b77409424207",
+                    "propertyDependencies": {
+                        "assignGeneratedIpv6CidrBlock": null,
+                        "cidrBlock": null,
+                        "enableDnsHostnames": null,
+                        "enableDnsSupport": null,
+                        "instanceTenancy": null
+                    },
+                    "aliases": [
+                        "urn:pulumi:dev::backend-api-aws::aws:ec2/vpc:Vpc::vpc"
+                    ],
+                    "sequenceNumber": 1
+                },
+                "type": "deleting"
+            }
+        ]
+    }
+}
